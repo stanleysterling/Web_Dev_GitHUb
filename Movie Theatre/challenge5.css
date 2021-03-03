@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: black;
+    flex-direction: column;
+    height: 100%;
+}
+
+#head {
+    margin: 5vh;
+}
+
+#title {
+    font-size: 10vh;
+    color: white;
+    letter-spacing: 5px;
+    font-family: 'Righteous', cursive;
+}
+
+#mainwrapper {
+    display: flex;
+    justify-content: space-around;
+    height: 60vh;
+    width: 90vw;
+    align-items: center;
+    border-top: 3px white solid;
+    border-bottom: 3px white solid;
+}
+
+.posters {
+    display: flex;
+}
+
+img {
+    height: 40vh;
+    margin: 1vw;
+}
+
+#buttonwrapper {
+    display: flex;
+    flex-direction: row;
+    height: 15vh;
+    align-items: center;
+    justify-content: space-around !important;
+}
+
+input {
+    background-color: white;
+    height: 3vh;
+    padding: 1vh 2vh;
+    font-size: 1em;
+    border-radius: 2.5vh;
+    border-style: none;
+    font-family: 'Raleway', sans-serif;
+}
+
+#link {
+    width: 50vw;
+}
+
+button {
+    height: 5vh;
+    padding: 1vh 2vh;
+    border-radius: 2.5vh;
+    border-style: none;
+    background-color: white;
+    font-size: 1em;
+}
+
+.moviename {
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.imageholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.3em;
+}
