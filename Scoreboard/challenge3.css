@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+}
+
+#scoreboard {
+    width: 70vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#board {
+    width: 50vw;
+    height: 60vh;
+    background-color: #f3f3f3;
+    display: flex;
+    border-radius: 30px;
+    flex-wrap: wrap;
+}
+
+#controlpanel {
+    width: 30vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#wrapper1,
+#wrapper2 {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#homescore {
+    width: 33%;
+    height: 100%;
+}
+
+#homeword {
+    text-align: center;
+    margin: 20px;
+    font-size: 2.5em;
+    color: gray;
+    font-family: 'Staatliches', cursive;}
+
+#homescorenumber {
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 600;
+    font-size: 8em;
+    text-align: center;
+}
+
+#wrappertimer {
+    width: 33%;
+}
+
+#timer {
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 500;
+    font-size: 5em;
+    text-align: center;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#period {
+    font-family: 'Chakra Petch', sans-serif;
+    text-align: center;
+    font-size: 3em;
+    margin: 30px;
+    font-weight: 400;
+}
+
+#guestscore {
+    width: 33%;
+    height: 100%;
+}
+
+#guestword {
+    text-align: center;
+    margin: 20px;
+    font-size: 2.5em;
+    color: gray;
+    font-family: 'Staatliches', cursive;}
+
+#guestscorenumber {
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 600;
+    font-size: 8em;
+    text-align: center;
+}
+
+#wrapper2 {
+    height: 50%;
+}
+
+#panel {
+    height: 70vh;
+    margin-right: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#homescorecontrol,
+#guestscorecontrol,
+#periodcontrol,
+#inputwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+#inputwrapper {
+    align-items: center;
+    text-align: center;
+}
+
+#homewordcontrol,
+#guestwordcontrol,
+#periodwordcontrol {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 10px;
+}
+
+button {
+    border: none;
+    background-color: #f3f3f3;
+    font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: lightgray;
+    transition: 0.3s;
+}
+
+input {
+    cursor: pointer;
+}
+
+#inputwrapper input {
+    cursor: text;
+}
+
+#start {
+    width: 100%;
+    height: 4vw;
+    font-size: 2.5em;
+    border-radius: 2vw;
+}
+
+#timercontrol {
+    width: 20vw;
+}
+
+#plus,
+#minus,
+#reset,
+#one,
+#two,
+#three,
+#sendbutton {
+    font-size: 1em;
+    height: 4vw;
+    margin: 0vw 1.1vw;
+    border-radius: 2vw;
+    width: 4vw;
+    text-align: center;
+}
+
+#penalty {
+    margin-top: 20px;
+}
+
+#penaltyinput {
+    height: 4vw;
+    border-radius: 2vw;
+    width: 55%;
+    font-size: 1.3em;
+    font-family: 'Quicksand', sans-serif;
+    padding-left: 20px;
+}
+
+label {
+    font-size: 1em;
+    margin-left: 1em;
+    border-radius: 2vw;
+    width: 4vw;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#radiowrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#radio {
+    display: flex;
+    align-items: center;
+}
+
+#homepenalty,
+#guestpenalty {
+    width: 50%;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 2.5em;
+}
+
+#homepenaltylist {
+    margin: 10% 20% 0 20%;
+}
+
+#guestpenaltylist {
+    margin: 10% 20% 0 20%;
+    text-align: right;
+}
+
+#penaltyreset {
+    height: 2vw;
+    border-radius: 1vw;
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+}
+
+#snackbar,
+#snackbar2 {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 26px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show,
+#snackbar2.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}

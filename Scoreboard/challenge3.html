@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoreboard</title>
+    <link rel="stylesheet" href="challenge3.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="challenge3.js"></script>
+    <div id="scoreboard">
+        <div id="board">
+            <div id="wrapper1">
+                <div id="homescore">
+                    <div id="homeword">HOME</div>
+                    <div id="homescorenumber">0</div>
+                </div>
+                <div id="wrappertimer">
+                    <div id="timer">
+                        <div><span id="time"></span></div>
+                    </div>
+                    <div id="period">
+                        <div id="periodnumber">0</div>
+                    </div>
+                </div>
+                <div id="guestscore">
+                    <div id="guestword">GUEST</div>
+                    <div id="guestscorenumber">0</div>
+                </div>
+            </div>
+            <div id="wrapper2">
+                <div id="homepenalty">
+                    <div id="homepenaltylist"></div>
+                </div>
+                <div id="guestpenalty">
+                    <div id="guestpenaltylist"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="controlpanel">
+        <div id="panel">
+            <div id="timercontrol">
+                <button id="start">START</button>
+            </div>
+            <div id="homescorecontrol">
+                <div id="homewordcontrol">HOME SCORE</div>
+                <button id="plus" onclick="addHomeScore()">+</button>
+                <button id="minus" onclick="subtractHomeScore()">-</button>
+                <button id="reset" onclick="resetHomeScore()">RESET</button>
+            </div>
+            <div id="guestscorecontrol">
+                <div id="guestwordcontrol">GUEST SCORE</div>
+                <button id="plus" onclick="addGuestScore()">+</button>
+                <button id="minus" onclick="subtractGuestScore()">-</button>
+                <button id="reset" onclick="resetGuestScore()">RESET</button>
+            </div>
+            <div id="periodcontrol">
+                <div id="periodwordcontrol">PERIOD</div>
+                <button id="one" onclick="periodOne()">1</button>
+                <button id="two" onclick="periodTwo()">2</button>
+                <button id="three" onclick="periodThree()">3</button>
+            </div>
+            <div id="penalty">
+                <div id="radiowrapper">
+                    <div id="radio">
+                        <input type="radio" id="home" name="team">
+                        <label for="home">HOME</label>
+                    </div>
+                    <div id="radio">
+                        <input type="radio" id="guest" name="team">
+                        <label for="guest">GUEST</label>
+                    </div>
+                </div>
+                <div id="inputwrapper">
+                    <input id="penaltyinput" type="text" placeholder="Player Name">
+                    <button id="sendbutton" onclick="penalty()">SEND</button>
+                </div>
+                <button id="penaltyreset" onclick="penaltyReset()">RESET</button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div id="snackbar">Please choose either HOME or GUEST</div>
+        <div id="snackbar2">Please enter a Player's Name</div>
+    </div>
+</body>
+</html>
