@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="challenge4.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="calculator">
+        <div id="upperwrapper">
+            <div class="number" id="displaywrapper">
+                <p id="display"></p>
+            </div>
+            <input type="number" class="number" id="numberone" placeholder="Number 1"></input>
+            <input type="number" class="number" id="numbertwo" placeholder="Number 2"></input>
+        </div>
+        <div id="buttonwrapper">
+            <button class="operator" id="addition" onclick="addition()">+</button>
+            <button class="operator" id="subtraction" onclick="subtraction()">-</button>
+            <button class="operator" id="multiplication" onclick="multiplication()">×</button>
+            <button class="operator" id="division" onclick="division()">÷</button>    
+        </div>
+    </div>
+    <div>
+        <div id="snackbar">Please enter numbers!</div>
+        <div id="snackbar2">Don't enter letters!</div>
+    </div>
+    <script src="challenge4.js"></script>
+</body>
+</html>

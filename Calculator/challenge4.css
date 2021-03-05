@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculator {
+    background-color: #f3f3f3;
+    height: 80vh;
+    width: 30vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 3vw;
+}
+
+.number {
+    width: 20vw;
+    height: 7vh;
+}
+
+#displaywrapper {
+    background-color: gray;
+    margin-top: 2vw;
+    height: 11vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    width: 23vw;
+    border-radius: 5.5vh;
+}
+
+#display {
+    color: white;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+input {
+    border: none;
+    cursor: text;
+}
+
+#buttonwrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 6vw;
+    height: 6vw;
+    margin: 0 3vw;
+    border: none;
+    border-radius: 3vw;
+    font-size: 30px;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+}
+
+button:hover {
+    background-color: gray;
+    transition: 0.3s;
+}
+
+#upperwrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#numberone,
+#numbertwo {
+    padding: 0 20px;
+    border-radius: 3.5vh;
+    font-size: 1em;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#snackbar,
+#snackbar2 {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 26px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show,
+#snackbar2.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
