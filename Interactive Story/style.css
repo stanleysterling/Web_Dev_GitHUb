@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'VT323', 'Ubuntu Mono', 'Fira Mono';
+}
+
+.container {
+    height: 100vh;
+    background-image: url('tumblr_pev1h40D0i1sg6ldbo1_1280.webp');
+    background-size: cover;
+    /* background-position-y: 70%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    z-index: -1;
+}
+
+.containertwo {
+    height: 100vh;
+    background-color: black;
+    background-size: cover;
+    /* background-position-y: 70%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    z-index: -1;
+}
+
+.title {
+    margin-top: 12vh;
+    font-size: 3em;
+}
+
+#test-area {
+    width: 70vw;
+    height: 60vh;
+    box-sizing: border-box;
+    padding: 2em;
+    background-color: rgb(255, 255, 255, 0.8);
+    margin: auto;
+    text-align: left;
+    color: rgb(2, 40, 90);
+    overflow: auto;
+    font-size: 1.6em;
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .title {
+        font-size: 2em;
+    }
+
+    .test-area {
+        width: 80vw;
+    }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #b5e3f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0b7a9c;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #006888;
+}
+
+.buttonone {
+    width: 280px;
+    height: 60px;
+    align-self: center;
+    margin-top: 150px;
+    font-size: 1.5em;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.buttontwo {
+    width: 280px;
+    height: 60px;
+    align-self: center;
+    margin-top: 120px;
+    font-size: 1.5em;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.buttonthree {
+    width: 280px;
+    height: 60px;
+    align-self: center;
+    margin-top: 120px;
+    font-size: 1.5em;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.buttonfour {
+    width: 280px;
+    height: 60px;
+    align-self: center;
+    margin-top: 30px;
+    font-size: 1.5em;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.mgn-top {
+    margin-top: 100px;
+}
+
+.restart {
+    width: 280px;
+    height: 60px;
+    align-self: center;
+    margin-top: 150px;
+    font-size: 1.5em;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.buttonfive {
+    width: 380px;
+    height: 60px;
+    align-self: center;
+    margin-top: 150px;
+    font-size: 1.5em;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.buttonsix {
+    width: 520px;
+    height: 60px;
+    align-self: center;
+    margin-top: 30px;
+    font-size: 1.5em;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    border: none;
+}
