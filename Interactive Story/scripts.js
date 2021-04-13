@@ -1,10 +1,14 @@
 var bgm = new Audio("1 Hour of Epic Space Music COSMOS - Volume 2   GRV MegaMix.mp3")
 var death = new Audio("Gta 5 Wasted Sound effect.mp3")
 
+function clear() {
+    document.querySelector("#test-area").innerHTML = ""
+}
+
 function buttonone() {
     bgm.play()
 
-    document.querySelector("#test-area").innerHTML = ""
+    clear()
     document.querySelector("#test-area").innerHTML = 
     `
     <p>All in a sudden you see red dust in the air and the strong winds blowing them onto your helmet. <br>
@@ -16,7 +20,7 @@ function buttonone() {
 
 function buttontwo() {
     document.querySelector(".container").style.backgroundImage = "url('blood.jpg')";
-    document.querySelector("#test-area").innerHTML = ""
+    clear()
     document.querySelector("#test-area").innerHTML = 
     `
     <p>EXTREME PAIN SHATTERS YOUR NERVES<br>
@@ -28,7 +32,7 @@ function buttontwo() {
 
 function buttonthree() {
     document.querySelector(".container").style.backgroundImage = "url('tumblr_pev1h40D0i1sg6ldbo1_1280.webp')";
-    document.querySelector("#test-area").innerHTML = ""
+    clear()
     document.querySelector("#test-area").innerHTML = 
     `
     <p>You woke up and found all your crewmates have left, they thought you were dead. Now you are alone.<br>
@@ -44,7 +48,7 @@ function buttonfourone() {
     death.play()
 
     document.querySelector(".container").style.backgroundImage = "url('wasted.jpg')";
-    document.querySelector("#test-area").innerHTML = ""
+    clear()
     document.querySelector("#test-area").innerHTML = 
     `
     <p>Your wound wasn't clean and is now seriously infected.<br>
@@ -54,7 +58,7 @@ function buttonfourone() {
 }
 
 function buttonfourtwo() {
-    document.querySelector("#test-area").innerHTML = ""
+    clear()
     document.querySelector("#test-area").innerHTML = 
     `
     <p>You stitched up your wounds and took good care of it. After a few days you are ready to work again.<br>
@@ -64,7 +68,7 @@ function buttonfourtwo() {
 }
 
 function buttonfive() {
-    document.querySelector("#test-area").innerHTML = ""
+    clear()
     document.querySelector("#test-area").innerHTML = 
     `
     <p>You found a patch of potatoes. You decided to plant them in the hab as survival food.<br>
@@ -79,7 +83,7 @@ function restart() {
     bgm.play()
     document.querySelector(".container").style.backgroundImage = "url('tumblr_pev1h40D0i1sg6ldbo1_1280.webp')";
 
-    document.querySelector("#test-area").innerHTML = ""
+    clear()
     document.querySelector("#test-area").innerHTML = 
     `
     <p>You have been out on missions on Mars for 2 years and now your can't wait to go back home, to the beautiful Earth</p>
