@@ -73,8 +73,8 @@ function buttonfive() {
     `
     <p>You found a patch of potatoes. You decided to plant them in the hab as survival food.<br>
     You found out that you need some resources to plant the potatoes. What are you going to do?</p>
-    <button onclick="buttonsixone()" class="buttonsix mgn-top">Make water from rocket fuel</button>
-    <button onclick="buttonsixtwo()" class="buttonsix">Make fertilizers from own feces</button>
+    <button onclick="buttonsixone()" class="buttonsix mgn-top">Make water</button>
+    <button onclick="buttonsixtwo()" class="buttonsix">Make fertilizers</button>
     `
 }
 
@@ -88,5 +88,26 @@ function restart() {
     `
     <p>You have been out on missions on Mars for 2 years and now your can't wait to go back home, to the beautiful Earth</p>
     <button onclick="buttonone()" class="buttonone">Open the airlock</button>
+    `
+}
+
+function buttonsixone() {
+    clear()
+    document.querySelector("#test-area").innerHTML = 
+    `
+    <p>You have limited choices to make water. But as a chemist, yuo finally came up with two possible solutions. <br>
+    Which method will you choose to gain water?</p>
+    <button onclick="buttonsevenone()" class="buttonseven mgn-top">Recycle Urine</button>
+    <button onclick="buttonseventwo()" class="buttonseven">Decompose Rocket Fuel</button>
+    `
+}
+
+function buttonsixtwo() {
+    clear()
+    document.querySelector("#test-area").innerHTML = 
+    `
+    <p>You thought for a sec..... Hmmmm.... What could've been nutritious?</p>
+    <button onclick="buttonseventhree()" class="buttonseven mgn-top">Martian soil</button>
+    <button onclick="buttonsevenfour()" class="buttonseven">Yours and your crewmates' feces</button>
     `
 }

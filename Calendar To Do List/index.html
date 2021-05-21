@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To Do List</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="header">
+            <div class="box" id="border">
+                <div class="title">Sunday</div>
+                <div class="line"></div>
+                <div class="list" id="sunlist"></div>
+            </div>
+            <div class="box" id="border">
+                <div class="title">Monday</div>
+                <div class="line"></div>
+                <div class="list" id="monlist"></div>
+            </div>
+            <div class="box" id="border">
+                <div class="title">Tuesday</div>
+                <div class="line"></div>
+                <div class="list" id="tuelist"></div>
+            </div>
+            <div class="box" id="border">
+                <div class="title">Wednesday</div>
+                <div class="line"></div>
+                <div class="list" id="wedlist"></div>
+            </div>
+            <div class="box" id="border">
+                <div class="title">Thursday</div>
+                <div class="line"></div>
+                <div class="list" id="thulist"></div>
+            </div>
+            <div class="box" id="border">
+                <div class="title">Friday</div>
+                <div class="line"></div>
+                <div class="list" id="frilist"></div>
+            </div>
+            <div class="box" id="border">
+                <div class="title">Saturday</div>
+                <div class="line"></div>
+                <div class="list" id="satlist"></div>
+            </div>
+            <div class="boxcontrol">
+                <div class="control1">
+                    <input type="text" name="input" id="input" placeholder="Things To Do">
+                    <div class="btncontainer">
+                        <input type="radio" name="day" id="sunbtn">
+                        <p>Sunday</p>
+                    </div>
+                    <div class="btncontainer">
+                        <input type="radio" name="day" id="monbtn">
+                        <p>Monday</p>
+                    </div>
+                    <div class="btncontainer">
+                        <input type="radio" name="day" id="tuebtn">
+                        <p>Tuesday</p>
+                    </div>
+                    <div class="btncontainer">
+                        <input type="radio" name="day" id="wedbtn">
+                        <p>Wednesday</p>
+                    </div>
+                    <div class="btncontainer">
+                        <input type="radio" name="day" id="thubtn">
+                        <p>Thursday</p>
+                    </div>
+                    <div class="btncontainer">
+                        <input type="radio" name="day" id="fribtn">
+                        <p>Friday</p>
+                    </div>
+                    <div class="btncontainer">
+                        <input type="radio" name="day" id="satbtn">
+                        <p>Saturday</p>
+                    </div>
+                    <button onclick="input()" id="submit">ENTER</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
