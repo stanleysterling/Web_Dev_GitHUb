@@ -2,13 +2,45 @@
 // 2. store data into the toDoList array
 // 3. for each loop to print out elements of arrays to appropriate columns
 
-let sunday = JSON.parse(localStorage.getItem('sunday'))
-let monday = JSON.parse(localStorage.getItem('monday'))
-let tuesday = JSON.parse(localStorage.getItem('tuesday'))
-let wednesday = JSON.parse(localStorage.getItem('wednesday'))
-let thursday = JSON.parse(localStorage.getItem('thursday'))
-let friday = JSON.parse(localStorage.getItem('friday'))
-let saturday = JSON.parse(localStorage.getItem('saturday'))
+// day.forEach(function(day, index) {
+//     let `${day}` = []
+//     if(localStorage.getItem('`${day}`'))
+// })
+
+// day.forEach(function(day) {
+//     if(localStorage.getitem(`'${day}'`)) {
+//         `${day}` = JSON.parse(localStorage.getItem(`'${day}'`))
+//     }
+// })
+
+let sunday = []
+if(localStorage.getItem('sunday')) {
+    sunday = JSON.parse(localStorage.getItem('sunday'))
+}
+let monday = []
+if(localStorage.getItem('monday')) {
+    monday = JSON.parse(localStorage.getItem('monday'))
+}
+let tuesday = []
+if(localStorage.getItem('tuesday')) { 
+    tuesday = JSON.parse(localStorage.getItem('tuesday'))
+}
+let wednesday = []
+if(localStorage.getItem('wednesday')) { 
+    wednesday = JSON.parse(localStorage.getItem('wednesday'))
+}
+let thursday = []
+if(localStorage.getItem('thursday')) { 
+    thursday = JSON.parse(localStorage.getItem('thursday'))
+}
+let friday = []
+if(localStorage.getItem('friday')) { 
+    friday = JSON.parse(localStorage.getItem('friday'))
+}
+let saturday = []
+if(localStorage.getItem('saturday')) { 
+    saturday = JSON.parse(localStorage.getItem('saturday'))
+}
 
 // on page load call a function
     // localStorage.getItem(day)
@@ -17,8 +49,17 @@ let saturday = JSON.parse(localStorage.getItem('saturday'))
     // for each loop
 
 function loadPage() {
+    // 1. Check if local storage has the arrays
+    // 2. If there's the array, grab it
+    // 3, If there's nothing, create an empty array
+    if(localStorage.getItem('sunday')) {
+        var toDoList = JSON.parse(localStorage.getItem('sunday'))
+    } else {
+        var toDoList = []
+    }
     // console.log(localStorage.getItem('sunday'))
-    var toDoList = JSON.parse(localStorage.getItem('sunday'))
+    // var toDoList = JSON.parse(localStorage.getItem('sunday'))
+    console.log(toDoList)
     document.getElementById("sunlist").innerHTML = ""
     toDoList.forEach(function(element) {
         document.getElementById("sunlist").innerHTML += 
@@ -126,7 +167,7 @@ function input() {
             `
             <div class="individualwrapper">
                 <div class="listitems">${element}</div>
-                <div class="cross">&#10005</div>
+                <div class="cross" onclick="remove(this)">&#10005</div>
             </div>
             `
             // if(index % 2 != 0) {
@@ -149,7 +190,7 @@ function input() {
             `
             <div class="individualwrapper">
                 <div class="listitems">${element}</div>
-                <div class="cross">&#10005</div>
+                <div class="cross" onclick="remove(this)">&#10005</div>
             </div>
             `
         })
@@ -164,7 +205,7 @@ function input() {
             `
             <div class="individualwrapper">
                 <div class="listitems">${element}</div>
-                <div class="cross">&#10005</div>
+                <div class="cross" onclick="remove(this)">&#10005</div>
             </div>
             `
         })
@@ -179,7 +220,7 @@ function input() {
             `
             <div class="individualwrapper">
                 <div class="listitems">${element}</div>
-                <div class="cross">&#10005</div>
+                <div class="cross" onclick="remove(this)">&#10005</div>
             </div>
             `
         })
@@ -194,7 +235,7 @@ function input() {
             `
             <div class="individualwrapper">
                 <div class="listitems">${element}</div>
-                <div class="cross">&#10005</div>
+                <div class="cross" onclick="remove(this)">&#10005</div>
             </div>
             `
         })
@@ -209,7 +250,7 @@ function input() {
             `
             <div class="individualwrapper">
                 <div class="listitems">${element}</div>
-                <div class="cross">&#10005</div>
+                <div class="cross" onclick="remove(this)">&#10005</div>
             </div>
             `
         })
@@ -224,7 +265,7 @@ function input() {
             `
             <div class="individualwrapper">
                 <div class="listitems">${element}</div>
-                <div class="cross">&#10005</div>
+                <div class="cross" onclick="remove(this)">&#10005</div>
             </div>
             `
         })
@@ -235,3 +276,11 @@ function input() {
 document.addEventListener("keydown", function(event) {
     console.log(event.code)
 })
+
+function remove(el) {
+    // console.log(el.parentNode.firstElementChild.innerText)
+    let pos = sunday.indexOf(el.parentNode.firstElementChild.innerText)
+    el.parentNode.remove()
+    sunday.splice(pos, 1)
+    localStorage.setItem('sunday', JSON.stringify(sunday))
+}
