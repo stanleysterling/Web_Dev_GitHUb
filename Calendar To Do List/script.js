@@ -1,46 +1,51 @@
+let digitKeys = ['Digit0', 'Digit1', 'Digit2', 'Digit3', 'Digit4', 'Digit5', 'Digit6']
+let day = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
+let daybtn = ['sunbtn', 'monbtn', 'tuebtn', 'wedbtn', 'thubtn', 'fribtn', 'satbtn']
+let daylist = ['sunlist', 'monlist', 'tuelist', 'wedlist', 'thulist', 'frilist', 'satlist']
+
 // 1. get data from input
 // 2. store data into the toDoList array
 // 3. for each loop to print out elements of arrays to appropriate columns
 
 // day.forEach(function(day, index) {
-//     let `${day}` = []
+//     let `${day}` = []    
 //     if(localStorage.getItem('`${day}`'))
 // })
 
-// day.forEach(function(day) {
-//     if(localStorage.getitem(`'${day}'`)) {
-//         `${day}` = JSON.parse(localStorage.getItem(`'${day}'`))
-//     }
-// })
+day.forEach(function(day) {
+    if(localStorage.getItem(`'${day}'`)) {
+        day = JSON.parse(localStorage.getItem(`'${day}'`))
+    }    
+})    
 
 let sunday = []
-if(localStorage.getItem('sunday')) {
-    sunday = JSON.parse(localStorage.getItem('sunday'))
-}
+// if(localStorage.getItem('sunday')) {
+//     sunday = JSON.parse(localStorage.getItem('sunday'))    
+// }
 let monday = []
-if(localStorage.getItem('monday')) {
-    monday = JSON.parse(localStorage.getItem('monday'))
-}
+// if(localStorage.getItem('monday')) {
+//     monday = JSON.parse(localStorage.getItem('monday'))    
+// }
 let tuesday = []
-if(localStorage.getItem('tuesday')) { 
-    tuesday = JSON.parse(localStorage.getItem('tuesday'))
-}
+// if(localStorage.getItem('tuesday')) { 
+//     tuesday = JSON.parse(localStorage.getItem('tuesday'))    
+// }
 let wednesday = []
-if(localStorage.getItem('wednesday')) { 
-    wednesday = JSON.parse(localStorage.getItem('wednesday'))
-}
+// if(localStorage.getItem('wednesday')) { 
+//     wednesday = JSON.parse(localStorage.getItem('wednesday'))    
+// }
 let thursday = []
-if(localStorage.getItem('thursday')) { 
-    thursday = JSON.parse(localStorage.getItem('thursday'))
-}
+// if(localStorage.getItem('thursday')) { 
+//     thursday = JSON.parse(localStorage.getItem('thursday'))    
+// }
 let friday = []
-if(localStorage.getItem('friday')) { 
-    friday = JSON.parse(localStorage.getItem('friday'))
-}
+// if(localStorage.getItem('friday')) { 
+//     friday = JSON.parse(localStorage.getItem('friday'))    
+// }
 let saturday = []
-if(localStorage.getItem('saturday')) { 
-    saturday = JSON.parse(localStorage.getItem('saturday'))
-}
+// if(localStorage.getItem('saturday')) { 
+//     saturday = JSON.parse(localStorage.getItem('saturday'))    
+// }
 
 // on page load call a function
     // localStorage.getItem(day)
@@ -48,15 +53,15 @@ if(localStorage.getItem('saturday')) {
     // put them into appropriate divs
     // for each loop
 
+var toDoList = []    
+
 function loadPage() {
     // 1. Check if local storage has the arrays
     // 2. If there's the array, grab it
     // 3, If there's nothing, create an empty array
     if(localStorage.getItem('sunday')) {
-        var toDoList = JSON.parse(localStorage.getItem('sunday'))
-    } else {
-        var toDoList = []
-    }
+        toDoList = JSON.parse(localStorage.getItem('sunday'))
+    }    
     // console.log(localStorage.getItem('sunday'))
     // var toDoList = JSON.parse(localStorage.getItem('sunday'))
     console.log(toDoList)
@@ -67,14 +72,14 @@ function loadPage() {
         <div class="individualwrapper">
             <div class="listitems">${element}</div>
             <div class="cross">&#10005</div>
-        </div>
+        </div>    
         `
-    })
+    })    
     // day.forEach(function(day, index) {
-    //     var toDoList = JSON.parse(localStorage.getItem(`${day}`))
+    //     var toDoList = JSON.parse(localStorage.getItem(`${day}`))    
     //     document.getElementById(daylist[index]).innerHTML = ""
     //     toDoList.forEach(function(element, index) {
-    //         document.getElementById(daylist[index]).innerHTML += 
+    //         document.getElementById(daylist[index]).innerHTML +=     
     //         `
     //         <div class="individualwrapper">
     //             <div class="listitems">${element}</div>
@@ -83,14 +88,9 @@ function loadPage() {
     //         `
     //     })
     // })
-}
+}    
 
 loadPage()
-
-let digitKeys = ['Digit0', 'Digit1', 'Digit2', 'Digit3', 'Digit4', 'Digit5', 'Digit6']
-let day = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
-let daybtn = ['sunbtn', 'monbtn', 'tuebtn', 'wedbtn', 'thubtn', 'fribtn', 'satbtn']
-let daylist = ['sunlist', 'monlist', 'tuelist', 'wedlist', 'thulist', 'frilist', 'satlist']
 
 var buttonclick = document.getElementById("input");
 document.addEventListener("keydown", function(event) {
@@ -143,6 +143,25 @@ document.addEventListener("keydown", function(event) {
 var item;
 
 function input() {
+//     daybtn.forEach(function(btn, index) {
+//         if(document.getElementById(`${btn}`).checked) {
+//             localStorage.getItem
+//             sunday.push(item)
+//             localStorage.setItem(day[index], JSON.stringify(day[index]))
+//             var toDoList = JSON.parse(localStorage.getItem(day[index]))
+//             document.getElementById(daylist[index]).innerHTML = ""
+//             toDoList.forEach(function(element) {
+//                 document.getElementById(daylist[index]).innerHTML +=
+//                 `
+//                 <div class="individualwrapper">
+//                     <div class="listitems">${element}</div>
+//                     <div class="cross" onclick="remove(this)">&#10005</div>
+//                 </div>
+//                 `
+//             })
+//         }
+//     })
+// document.getElementById("input").value = "";
     item = document.querySelector("input").value
     if(document.getElementById("sunbtn").checked) {
         // get the full sunday array first
